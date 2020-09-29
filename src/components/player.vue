@@ -29,6 +29,25 @@ export default {
     deletePlayer:function(){
       this.players.pop();
     }
+  },
+  //Lifecycle Hooks
+  beforeCreate(){
+    alert('beforeCreate');
+  },
+  created(){
+    alert('created');
+  },
+  beforeMount(){
+    alert('beforeMount');
+  },
+  mounted(){
+    alert('mounted');
+  },
+  beforeUpdate(){
+    alert('beforeUpdate');
+  },
+  updated(){
+    alert('updated');
   }
 }
 </script>

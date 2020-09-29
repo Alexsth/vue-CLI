@@ -22,7 +22,7 @@ export default {
       this.title = 'Players List'
       // this.$emit('changeTitle','Players List');
       bus.$emit('titleChanged','Players List');
-    }
+     }
   }
 }
 </script>
