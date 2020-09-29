@@ -1,40 +1,34 @@
 <template>
-<div>
-  <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
-  <app-body v-bind:players="players"></app-body>
-  <app-footer v-bind:title="title"></app-footer>
-
-</div>
+<form-Helper>
+  <div slot="form-header">
+    <h3>This is the title of the form</h3>
+    <p> Fill the information below: </p>
+  </div>
+  <div slot="form-fields">
+    <input type="text" placeholder="Name" required />
+    <input type="password" placeholder="password" required/>
+  </div>
+  <div slot="form-controls">
+    <button v-on:click="handleSubmit"> Submit </button>
+  </div>
+</form-Helper>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import Player from './components/player.vue'
-
+import formHelper from './components/formHelper.vue'
 export default {
+
   components:{
-    'app-header': Header,
-    "app-footer": Footer,
-    "app-body": Player
+    'form-Helper': formHelper
   },
   data () {
     return {
-      players: [
-        {name: 'Ronaldo', speciality: 'everything', show: false},
-        {name: 'Messi', speciality: 'dribbling', show: false},
-        {name: 'Ramos', speciality: 'defence', show: false},
-        {name: 'Zidane', speciality: 'Coach', show: false},
-        {name: 'De Gea', speciality: 'Keeper', show: false}
-      ],
-      title: 'Players'
     }
+
   },
-  methods:{
-    updateTitle:function(updatedTitle){
-      this.title = updatedTitle;
-    }
-  }
+  methods: {
+
+    },
 }
 </script>
 
