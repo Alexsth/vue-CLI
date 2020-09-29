@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h2> {{ title }} </h2>
+  <h1> {{ title }} </h1>
   <players></players>
   </div>
 </template>
@@ -15,6 +15,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style scoped>
+h1{
+  color: red;
+}
 </style>

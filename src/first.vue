@@ -1,8 +1,10 @@
 <template>
+<div>
+  <h1> List of players </h1>
   <ul>
     <li v-for="player in players">{{ player }} </li>
   </ul>
-
+</div>
 </template>
 
 <script>
@@ -15,6 +17,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style scoped>
+h1{
+  color: green;
+}
 </style>
