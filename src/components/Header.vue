@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import {bus} from '../main';
 export default {
   props:{
     title:{
@@ -18,7 +19,9 @@ export default {
   },
   methods:{
     changeTitle: function(){
-      this.$emit('changeTitle','Players List');
+      this.title = 'Players List'
+      // this.$emit('changeTitle','Players List');
+      bus.$emit('titleChanged','Players List');
     }
   }
 }
