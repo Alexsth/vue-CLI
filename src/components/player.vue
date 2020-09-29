@@ -12,16 +12,16 @@
 <script>
 
 export default {
+  props:{
+    players:{
+      type: Array,
+      required: true
+    }
+  },
 
   data () {
     return {
-      players: [
-        {name: 'Ronaldo', speciality: 'everything', show: false},
-        {name: 'Messi', speciality: 'dribbling', show: false},
-        {name: 'Ramos', speciality: 'defence', show: false},
-        {name: 'Zidane', speciality: 'Coach', show: false},
-        {name: 'De Gea', speciality: 'Keeper', show: false}
-      ]
+
     }
   }
 }

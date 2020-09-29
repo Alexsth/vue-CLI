@@ -1,7 +1,7 @@
 <template>
 <div>
   <app-header></app-header>
-  <app-body></app-body>
+  <app-body v-bind:players="players"></app-body>
   <app-footer></app-footer>
 
 </div>
@@ -20,6 +20,13 @@ export default {
   },
   data () {
     return {
+      players: [
+        {name: 'Ronaldo', speciality: 'everything', show: false},
+        {name: 'Messi', speciality: 'dribbling', show: false},
+        {name: 'Ramos', speciality: 'defence', show: false},
+        {name: 'Zidane', speciality: 'Coach', show: false},
+        {name: 'De Gea', speciality: 'Keeper', show: false}
+      ]
 
     }
   }
