@@ -1,8 +1,8 @@
 <template>
 <div>
-  <app-header></app-header>
+  <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
   <app-body v-bind:players="players"></app-body>
-  <app-footer></app-footer>
+  <app-footer v-bind:title="title"></app-footer>
 
 </div>
 </template>
@@ -26,8 +26,13 @@ export default {
         {name: 'Ramos', speciality: 'defence', show: false},
         {name: 'Zidane', speciality: 'Coach', show: false},
         {name: 'De Gea', speciality: 'Keeper', show: false}
-      ]
-
+      ],
+      title: 'Players'
+    }
+  },
+  methods:{
+    updateTitle:function(updatedTitle){
+      this.title = updatedTitle;
     }
   }
 }
